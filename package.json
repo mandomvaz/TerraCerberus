@@ -1,0 +1,23 @@
+{
+  "name": "terracerberus",
+  "version": "1.0.0",
+  "description": "Terrarium automation",
+  "main": "start.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandomvaz/TerraCerberus.git"
+  },
+  "keywords": [
+    "terraium",
+    "automation"
+  ],
+  "author": "Manuel Domínguez Vázquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mandomvaz/TerraCerberus/issues"
+  },
+  "homepage": "https://github.com/mandomvaz/TerraCerberus#readme"
+}
