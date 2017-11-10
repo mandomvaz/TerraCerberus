@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/mandomvaz/TerraCerberus/issues"
   },
-  "homepage": "https://github.com/mandomvaz/TerraCerberus#readme"
+  "homepage": "https://github.com/mandomvaz/TerraCerberus#readme",
+  "dependencies": {
+    "gimport": "1.0.3"
+  }
 }
