@@ -1,0 +1,5 @@
+{
+    "init": "tc_core/lib/init.js",
+    "uiserver": "tc_UI/ui.js",
+    "botserver": "tc_bot/start.js"
+}
