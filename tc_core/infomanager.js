@@ -1,18 +1,22 @@
 "use_strict"
 var moment = require("moment");
-var BDManager = module.exports = {};
+var path = require("path");
+var jsonFileHandler = global.gimport("jsonfilehandler");
 
-BDManager.getActualTemp = function(){
+const INFOFILESPATH = global.config.infoFilesLocation;
+
+function getActualTemp(file, sensorid){
     return new Promise((resolve, reject) => {
+        let filepath = path.join(INFOFILESPATH, file);
+        let info = jsonFileHandler.loadJsonData(filepath);
+
         resolve({
-            warmzone: 42,
-            midzone: 30,
-            coldzone: 24
+            temp: info[sensorid][0]
         });
     });
 }
 
-BDManager.getRangeTemp =  function(sensor, range){
+function getRangeTemp(sensor, range){
     return new Promise((resolve, reject) => {
         resolve({
             sensor: sensor,
@@ -33,9 +37,10 @@ BDManager.getRangeTemp =  function(sensor, range){
     });
 }
 
-BDManager.addTemperature = function(sensor, value){
+function addTemperature(sensor, value){
     return new Promise((resolve, reject) => {
         resolve(true);
     });
 }
 
+var InfoManager = module.exports = {};

@@ -1,0 +1,136 @@
+{
+    "terrariums":[
+        {
+            "name": "Terrario Agamenón",
+            "arduino": {
+                "ip": "192.168.0.136",
+                "port": 5000,
+                "sensors":[
+                    {
+                        "name": "Zona caliente",
+                        "id": "tazc"
+                    },
+                    {
+                        "name": "Zona templada",
+                        "id": "tazt"
+                    },
+                    {
+                        "name": "Zona fría",
+                        "id": "tazf"
+                    }
+                ],
+                "actuators":[
+                    {
+                        "name": "Iluminación",
+                        "id": "tailu",
+                        "state": true
+                    },
+                    {
+                        "name": "Calefacción",
+                        "id": "tacal",
+                        "state": true
+                    }
+                ]
+            },
+            "programs":[
+                {
+                    "name": "Despertar",
+                    "time": "10:00",
+                    "period": "dayly",
+                    "state": [
+                        {
+                            "id": "tailu",
+                            "state": true
+                        },
+                        {
+                            "id": "tacal",
+                            "state": true
+                        }
+                    ]
+                },
+                {
+                    "name": "A dormir",
+                    "time": "22:00",
+                    "period": "dayly",
+                    "state": [
+                        {
+                            "id": "tailu",
+                            "state": false
+                        },
+                        {
+                            "id": "tacal",
+                            "state": false
+                        }
+                    ]
+                }
+            ],
+            "infofile": "TerrarioAgamenon.json"
+        },
+        {
+            "name": "Terrario Skywalker",
+            "arduino": {
+                "ip": "192.168.0.137",
+                "port": 5000,
+                "sensors":[
+                    {
+                        "name": "Zona caliente",
+                        "id": "tszc"
+                    },
+                    {
+                        "name": "Zona templada",
+                        "id": "tszt"
+                    },
+                    {
+                        "name": "Zona fría",
+                        "id": "tszf"
+                    }
+                ],
+                "actuators":[
+                    {
+                        "name": "Iluminación",
+                        "id": "tsilu",
+                        "state": true
+                    },
+                    {
+                        "name": "Calefacción",
+                        "id": "tscal",
+                        "state": true
+                    }
+                ]
+            },
+            "programs":[
+                {
+                    "name": "Despertar",
+                    "time": "10:00",
+                    "period": "dayly",
+                    "state": [
+                        {
+                            "id": "tsilu",
+                            "state": true
+                        },
+                        {
+                            "id": "tscal",
+                            "state": true
+                        }
+                    ]
+                },
+                {
+                    "name": "A dormir",
+                    "time": "22:00",
+                    "period": "dayly",
+                    "state": [
+                        {
+                            "id": "tsilu",
+                            "state": false
+                        },
+                        {
+                            "id": "tscal",
+                            "state": false
+                        }
+                    ]
+                }
+            ],
+            "infofile": "TerrarioSkywalker.json"
+        }
+    ]
+}
