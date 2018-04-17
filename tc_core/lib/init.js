@@ -3,7 +3,7 @@
 var path = require('path');
 var fs = require("fs");
 
-const CONFIGFILENAME = "config";
+const CONFIGFILENAME = "config.json";
 const CONFIGFOLDER = "config";
 
 module.exports = function(){

@@ -10,7 +10,7 @@ var App = Express();
 
 global.gimport("init")();
 
-global.gimport("botserver");
+// global.gimport("botserver");
 
 // Start web application
 global.gimport("uiserver")(App, Express);
