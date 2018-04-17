@@ -1,0 +1,5 @@
+{
+    "BotToken":"",
+    "systemFileLocation": "/config/system.json",
+    "infoFilesLocation": "/infofiles"
+}
